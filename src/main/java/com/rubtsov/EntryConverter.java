@@ -3,11 +3,13 @@ package com.rubtsov;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
+import javax.faces.convert.FacesConverter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.rubtsov.entry.service.EntriesServise;
 
+@FacesConverter("entryConverter")
 public class EntryConverter implements Converter {
 
     @Autowired
