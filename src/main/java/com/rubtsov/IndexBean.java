@@ -3,11 +3,13 @@ package com.rubtsov;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.log4j.Logger;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.rubtsov.entry.model.Entry;
 import com.rubtsov.entry.service.EntriesServise;
@@ -52,4 +54,7 @@ public class IndexBean implements Serializable {
 		this.selectedEntry = selectedEntry;
 	}
     
+	public void hren() {
+		LOG.debug("hren");		
+	}
 }
