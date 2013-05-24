@@ -11,14 +11,15 @@
     <h:body>
          <h:form>
             <h:panelGrid columns="2">
-                <p:selectOneMenu value="#{indexBean.selectedName}">
+
+                <p:selectOneMenu value="#{indexBean.selectedName}" >
                     <f:selectItems value="#{indexBean.entries}" var="entry" itemLabel="#{entry.name}" itemValue="#{entry.name}" />
                 </p:selectOneMenu>
 
-                <p:selectOneMenu value="#{indexBean.selectedEntry}" converter="entryConverter">
+                <p:selectOneMenu value="#{indexBean.selectedEntry}" converter="#{entryConverter}">
                     <f:selectItems value="#{indexBean.entries}" var="entry" itemLabel="#{entry.name}" itemValue="#{entry}" />
                 </p:selectOneMenu>
-                 
+
                 <p:commandButton value="Submit" process="@form" update="@form"/>
             </h:panelGrid>
         </h:form>
